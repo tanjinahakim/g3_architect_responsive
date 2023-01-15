@@ -6,6 +6,9 @@
     --light-gray: #727272;
     --black: #131313;
     --orange: #FF900E;
+    --color-1: #4d82e6;
+    --color-2: #e2312e;
+    --color-3: #141612;
 }
 *{
     margin: 0;
@@ -211,7 +214,7 @@ nav ul li a.active{
 }
 .year-btn{
     left: 670px;
-    top: 2652px;
+    top: 2635px;
     position: absolute;
     z-index: 1;   
 }
@@ -224,6 +227,125 @@ nav ul li a.active{
     font-size: 18px;
     padding-bottom: 10px;
 }
+/*.............Some facts section styles............*/
+.achivement-section{
+    padding-top: 100px;
+    padding-left: 100px;
+}
+.achivements-title{
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--black);
+}
+.achivement-info{
+    padding-top: 24px;
+    width: 542px;
+    height: 52px;
+    line-height: 26px;
+    color: var(--light-gray);
+}
+.achivement-list{
+    padding-top: 70px;
+}
+.achivement-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+
+}
+.achivement{
+    width: 200px;
+    height: 200px;
+    border: 1px solid var(--orange);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 10px;
+}
+.achivement-logo{
+    width: 35px;
+    height: 35px;
+}
+.achivement-number{
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--dark-gray); 
+}
+.achivement-title{
+    padding: 0 15px;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--light-gray);
+}
+/*.............Animation............*/
+.achivement-logo{
+    transition: transform .2s;
+    width:50px;
+    height:50px;
+    margin:0 auto;
+}
+.achivement-logo:hover{
+    transform:scale(2.5);
+}
+.achivement-title{
+    animation: color-animation 5s linear infinite;
+  }
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  .achivement-number{
+    position: relative;
+    display: inline-block;
+    font-size: 40px;
+    color: var(--black);
+    animation: flip 2s infinite;
+    animation-delay: 0.7s
+  }
+  @keyframes flip {
+    0%,80% {
+      transform: rotateY(360deg) 
+    }
+  }
+  /*.............Sponsor section styles............*/
+  .sponsor-section{
+    padding-top: 100px;
+  }
+  .sponsor-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .sponsor-title{
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--black);
+  }
+  .sponsor-info{
+    padding-top: 24px;
+    width: 600px;
+    height: 52px;
+    text-align: center;
+    color: var(--dark-gray);
+  }
+  .sponsors{
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .sponsors img{
+    height: 50px;
+    width: 153px;
+    filter: grayscale(100%);
+  }
 /*.................Media Queries................*/
 @media only screen and (max-width: 688px) {
     .container{
@@ -362,4 +484,62 @@ nav ul li a.active{
         left: 84px;
         padding-bottom: 20px;
     }
+    .achivement-section{
+        padding-top: 80px;
+        padding-left: 70px;
+    }
+    .achivement-container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    .achivements-title{
+        padding-top: 60px;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    .achivement-info{
+        padding-top: 24px;
+        width: 242px;
+        height: 22px;
+        line-height: 16px;
+    }
+    .achivements{
+        order: 2;
+    }
+    .achivement-list{
+        grid-template-columns: repeat(1,1fr);
+        order: 1;
+        row-gap: 10px;
+    }
+    .sponsor-section{
+        padding-top: 50px;
+      }
+    .sponsor-details{
+        order: 1;
+      }
+    .sponsor-title{
+        padding-top: 50px;
+        font-weight: 700;
+        font-size: 25px;
+        text-align: left;
+      }
+      .sponsor-info{
+        padding: 24px 0;
+        width: 190px;
+        height: 67px;
+        text-align: center;
+      }
+      .sponsors{
+        padding-top: 115px;
+        flex-direction: column;
+        gap: 30px;
+        order: 2;
+      }
+      .sponsors img{
+        height: 40px;
+        width: 140px;
+      }
+
 }
