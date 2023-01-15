@@ -346,8 +346,63 @@ nav ul li a.active{
     width: 153px;
     filter: grayscale(100%);
   }
+   /*.............Footer section styles............*/
+   .footer-section{
+    padding: 100px 240px;
+   }
+   .footer-container{
+    padding: 20px 100px;
+    width: 950px;
+    height: 70px;
+    border-radius: 5px;
+    background:var(--light-orange);
+    text-align: center;
+  }
+  .copyright{
+    font-weight: 400;
+    font-size: 20px;
+    color: var(--dark-gray);
+  }
+  /*.............Extra section............*/
+  /*.............Project section styles............*/
+  .project-section{
+    padding: 141px 100px 465px 100px;
+  }
+  .project-details{
+    width: 580px;
+    height: 52px;
+    font-weight: 700;
+    font-size: 45px;
+    color: var(--black);
+  }
+  .projects{
+    padding: 50px 0 ;
+    display: flex;
+    gap: 10px;
+  }
+  .projects{
+    width: 70%;
+    height: 400px;
+    position: absolute;
+    left: 65%;
+    top: 3756px;
+    transform: translate(-50%, 50%);
+    background-image: url('../images/project1.jpg');
+    background-repeat: no-repeat;
+    animation: slider 9s infinite linear;
+  }
+  @keyframes slider{
+    0%{ background-image: url('../images/project2.jpg');}
+    35%{background-image: url('../images/project3.jpg'); }
+    75%{ background-image: url('../images/project4.jpg');}
+  }
+
 /*.................Media Queries................*/
-@media only screen and (max-width: 688px) {
+@media only screen and (max-width: 576px) {
+    *{
+        padding: 0;
+        margin: 0;
+    }
     .container{
         padding: 30px 0;
     }
@@ -364,7 +419,7 @@ nav ul li a.active{
         position: fixed;
         top: 80px;
         left: -100%;
-        background: var(--light-orange);
+        background: var(--white);
         height: 100vh;
         width: 100%;
         display: block;
@@ -398,11 +453,6 @@ nav ul li a.active{
     }
     .banner-image{
         order: 1;
-    }
-    .banner-img{
-        height: 50%;
-        width: 50%;
-        object-fit: contain;
     }
     .quicklist-section{
         padding: 30px 0;
@@ -449,9 +499,12 @@ nav ul li a.active{
     }
     .feature-info{
         padding: 20px 40px 20px 30px;
-        width: 100%;
+        width: 87%;
         height: 100%;
         object-fit: cover;
+    }
+    .features-info{
+        font-size: 2.5vw;
     }
     .feature-title{
         font-weight: 600;
@@ -480,19 +533,20 @@ nav ul li a.active{
         font-size: 14px;
     }
     .year-btn{
-        top: 4104px;
-        left: 84px;
+        top: 4120px;
+        left: 193px;
         padding-bottom: 20px;
     }
     .achivement-section{
-        padding-top: 80px;
-        padding-left: 70px;
+        padding-top: 0px;
+        padding-left: 20px;
+        justify-content: center;
+        align-items: center;
+
     }
     .achivement-container{
         display: grid;
         grid-template-columns: repeat(1,1fr);
-        align-items: center;
-        justify-content: center;
     }
     .achivements-title{
         padding-top: 60px;
@@ -501,15 +555,17 @@ nav ul li a.active{
     }
     .achivement-info{
         padding-top: 24px;
-        width: 242px;
+        width: 455px;
         height: 22px;
         line-height: 16px;
+        text-align: center;
     }
     .achivements{
+        text-align: center;
         order: 2;
     }
     .achivement-list{
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: repeat(2,1fr);
         order: 1;
         row-gap: 10px;
     }
@@ -540,6 +596,39 @@ nav ul li a.active{
       .sponsors img{
         height: 40px;
         width: 140px;
+      }
+      .footer-section{
+        padding: 30px 0;
+       }
+       .footer-container{
+        /* padding: 10px 30px; */
+        padding: 0;
+        width: 548px;
+        max-width: 1250;
+        height: 30px;
+        border-radius: 2px;
+        background: #FFFFFF;
+        
+      }
+      .copyright{
+        font-size: 2vw;
+      }
+      .project-section{
+        padding: 100px 100px 465px 100px;
+      }
+      .project-details{
+        width: 180px;
+        height: 32px;
+        font-weight: 700;
+        font-size: 20px;
+        
+      }
+      .projects{
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        left: 50%;
+        top: 6288px;
       }
 
 }
